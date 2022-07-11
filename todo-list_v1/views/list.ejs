@@ -1,30 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<%-include("header")-%>
+    <div class="box" id="heading">
+        <h1>
+            <%=ListTitle%>
+        </h1>
+    </div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO list</title>
-</head>
+    <div class="box">
+        <% for(var i=0; i<AddList.length;i++){%>
 
-<body>
-   
-        
-   <%=kindOfday %>
-   <ul>
-    <li>Booking The ticket</li>
-    <li>Taking Bath</li>
-    <li> Going for Shopping</li>
-
-   </ul>
-   <form action="/" method="post">
-
-       <label for="Item">Enter to do</label>
-       <input type="text" name="Item" id="Item">
-       <button type="submit">Add</button>
-       
-    </form>
-</body>
-
-</html>
+            <div class="item">
+                <input type="checkbox" name="" id="">
+                <p>
+                    <%=AddList[i] %>
+                </p>
+            </div>
+            <% }%>
+            
+            <form class="item" action="/" method="post">
+                
+                <label for="Item">Enter to do</label>
+                <input type="text" name="Item" placeholder="New Item" autocomplete="off">
+                <button type="submit" name="list" value=<%=ListTitle%>>+</button>
+                
+            </form>
+        </div>
+        <%-include("footer")-%>
