@@ -2,28 +2,20 @@ const express = require("express");
 const BodyParser = require("body-parser");
 const https = require("https");
 const app = express();
-
+const date = require(__dirname + "/date.js");
+console.log(date.getDay());
 
 app.use(express.static("public"));
 
-var items = ["Buy Food", "Drink Water", "Wacthing Anime"];
-let Itemwork = [];
+const items = ["Buy Food", "Drink Water", "Wacthing Anime"];
+const Itemwork = [];
 
 app.use(BodyParser.urlencoded({ extends: true }));
 app.set('view engine', 'ejs');
 
 app.get("/", (req, res) => {
     // res.sendFile(__dirname+"/index.html");
-
-    var today = new Date();
-    // var currentDay = today.getDay();
-    var option = {
-        weekday: "long",
-        day: "numeric",
-        month: "long"
-    }
-
-    var day = today.toLocaleDateString("en-US", option);
+    const day = date.getDay();
 
     res.render("list", { ListTitle: day, AddList: items });
 
@@ -34,16 +26,16 @@ app.get("/", (req, res) => {
 
 app.get("/work", (req, res) => {
 
-    res.render("list", { ListTitle: "Work - Title", AddList: Itemwork })
+    res.render("list", { ListTitle: "Work List", AddList: Itemwork })
 
 })
 
 
 app.post("/", (req, res) => {
 
-    let item = req.body.Item;
+    const item = req.body.Item;
     // console.log(req.body);
-
+    console.log(req.body.list);
     if (req.body.list === "Work") {
 
         Itemwork.push(item);
@@ -63,8 +55,8 @@ app.post("/", (req, res) => {
 //     res.redirect("/");
 // })
 
-app.get("/about",(req,res)=>{
-res.render("about");
+app.get("/about", (req, res) => {
+    res.render("about");
 })
 
 
