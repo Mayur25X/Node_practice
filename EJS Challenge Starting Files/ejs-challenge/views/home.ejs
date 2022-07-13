@@ -1,0 +1,17 @@
+<%-include("partials/header")-%>
+
+    <p>
+        <%=startingContent%>
+    </p>
+    
+    <% posts.forEach((Day)=>{console.log(Day.title)%> 
+    
+        <h2><%=Day.title%></h2>
+        <p><%=Day.postB%></p>
+
+<% }); %>
+
+
+
+
+        <%-include("partials/footer")-%>
