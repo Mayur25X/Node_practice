@@ -3,15 +3,17 @@
     <p>
         <%=startingContent%>
     </p>
-    
-    <% posts.forEach((Day)=>{console.log(Day.title)%> 
-    
-        <h2><%=Day.title%></h2>
-        <p><%=Day.postB%></p>
 
-<% }); %>
+    <% posts.forEach((Day)=>{console.log(Day.title)%>
+
+        <h2>
+            <%=Day.title%>
+        </h2>
+        <p>
+            <%=Day.postB.substring(0,100)+"....."%>
+            <a href="/posts/<%=Day.title%>">Read More</a>
+        </p>
+        <% }); %>
 
 
-
-
-        <%-include("partials/footer")-%>
+            <%-include("partials/footer")-%>
