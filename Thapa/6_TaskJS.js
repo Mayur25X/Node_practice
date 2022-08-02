@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { METHODS } = require("http");
 
 
 
@@ -24,13 +25,18 @@ const fs = require("fs");
 
 
 
+// METHOD 1
+//  Syncronus
 
 // const buff=fs.readFileSync("MyBio.txt","UTF8");
 // console.log(buff)
 
+// METHOD 2 
+// Asyncronus
 
-
-
+// fs.readFile('read.txt','utf-8',(err,data)=>{
+//     console.log(data);
+// })
 
 // fs.renameSync("Bio.txt","MyBio.txt")
 
