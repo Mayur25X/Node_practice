@@ -15,6 +15,7 @@ const JsonData=JSON.stringify(bioData);
 ///JSON file to js Object file
 const objFormat=JSON.parse(JsonData);
 
+////USING FILE TO CONVERT JSON FILE TO OBJECT FILE
 
 fs.writeFile("JSONFile.json",JsonData,(err)=>{
     console.log("done");
