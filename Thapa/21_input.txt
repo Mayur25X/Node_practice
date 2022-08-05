@@ -1,0 +1,21 @@
+C:\Users\MAYUR\Desktop\web devp\NODE\Thapa\21_Streams.js:tarting...12
+        if(err)
+        ^
+                                                         12
+ReferenceError: err is not defined
+    at ReadFileContext.callback (C:\Users\MAYUR\Desktop\web devp\NODE\Thapa\21_Streams.js:12:9)
+    at FSReqCallback.readFileAfterOpen [as oncomplete] (fs.js:282:13)                                             eb devp\NODE\Thapa\21_Streams.js:12:9
+[nodemon] app crashed - waiting for file changes before starting...                                               s.js:282:13)
+[nodemon] restarting due to changes...                   tarting...
+[nodemon] starting `node .\21_Streams.js`
+server is Open
+[Error: ENOENT: no such file or directory, open 'C:\Users\MAYUR\Desktop\web devp\NODE\Thapa\Input.txt'] {         \MAYUR\Desktop\web devp\NODE\Thapa\In
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\MAYUR\\Desktop\\web devp\\NODE\\Thapa\\Input.txt'                                             \\Input.txt'
+}
+
+
+
+Hello WOrld
