@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="d-flex justify-content-center mt-5 h-100">
+        <div class="d-flex align-items-center align-self-center card p-3 text-center cookies"><span class="mt-2"
+                id="Quotes">We use
+                third party cookies to personalize content, ads and analyze site traffic.</span>
+            <div id="author"><span class="mt-2">hbkjkl</span></div>
+            <button class="btn btn-dark mt-3 px-4" type="button" id="Next">Next</button>
+        </div>
+    </div>
+</body>
+<script>
+
+
+    const quotes = document.getElementById("Quotes");
+    const author = document.getElementById("author");
+    const Next = document.getElementById("Next")
+
+
+    let realData = "";
+    const getNewQuotes = () => {
+        let rnum = Math.floor(Math.random() * 10);
+        quotes.innerHTML=`<em><strong>"${realData[rnum].text}"</em>`;
+        author.innerText = `----${realData[rnum].author}`;
+    }
+    const getQuotes = async () => {
+
+        const api = "https://type.fit/api/quotes";
+        try {
+            let data = await fetch(api);
+            realData = await data.json();
+            getNewQuotes();
+            // console.log(realData);
+        } catch (error) { }
+    };
+
+    Next.addEventListener('click', getNewQuotes);
+
+    getQuotes();
+</script>
+
+</html>

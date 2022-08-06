@@ -1,0 +1,16 @@
+{
+  "name": "26_expressjs",
+  "version": "1.0.0",
+  "main": "26_27_express_Routing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mayur",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "install": "^0.13.0"
+  },
+  "description": ""
+}
