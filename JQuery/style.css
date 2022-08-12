@@ -1,0 +1,16 @@
+.big-title
+{
+    color: yellow;
+    font-size: 5rem;
+    font-family: cursive;
+}
+
+.margin
+{
+    margin: 20px;
+}
+
+.addpadding
+{
+    padding: 10px;
+}
