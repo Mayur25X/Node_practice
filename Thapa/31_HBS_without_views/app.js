@@ -4,6 +4,7 @@ const path=require("path");
 
 
 const staticPath=path.join(__dirname+"/public");
+app.use(express.static(staticPath));
 
 /// set Path for Template File
 const templatesPath=path.join(__dirname+"/templates");
@@ -15,7 +16,6 @@ app.set("views",templatesPath);
 app.set("view engine","hbs");
 
 
-app.use(express.static(staticPath));
 
 
 

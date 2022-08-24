@@ -1,5 +1,15 @@
 {
   "dependencies": {
-    "hbs": "^4.2.0"
-  }
+    "hbs": "^4.2.0",
+    "requests": "^0.3.0"
+  },
+  "name": "thapa",
+  "version": "1.0.0",
+  "main": "35_API_Weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
